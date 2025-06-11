@@ -1,0 +1,4 @@
+Projeto_Regressao: projeto bruto
+Projeto_Regressao_: projeto refinado
+
+Projeto para exercitar a criação de uma modelo de regressão linear com o objetivo de prever o valor de venda de casas.
