@@ -1,0 +1,144 @@
+table dataset
+	lineageTag: 800f923b-6efb-4d4c-9507-c72e4ca6973b
+
+	column ID_Pedido
+		dataType: string
+		lineageTag: cd46b615-a408-48a6-8879-009f9b4444c0
+		summarizeBy: none
+		sourceColumn: ID_Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data_Pedido
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: eacade03-59aa-47df-9007-08821f8925d2
+		summarizeBy: none
+		sourceColumn: Data_Pedido
+
+		variation Variation
+			isDefault
+			relationship: 0565d162-3926-47c7-a4a3-ae283e206ecc
+			defaultHierarchy: LocalDateTable_715b0528-ec98-4f3d-bbce-fe85e1a48c8d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_Cliente
+		dataType: string
+		lineageTag: 4f88709b-ff75-4bfe-ba37-81d25e0384c6
+		summarizeBy: none
+		sourceColumn: ID_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segmento
+		dataType: string
+		lineageTag: 0ffeae4d-4866-44ca-8453-a44cb5993eaa
+		summarizeBy: none
+		sourceColumn: Segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regiao
+		dataType: string
+		lineageTag: d55c226a-760d-4fd4-aa41-7d2e1c45f2f3
+		summarizeBy: none
+		sourceColumn: Regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 56e6a717-0c84-4ebb-9818-7a857254e071
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product ID'
+		dataType: string
+		lineageTag: 8cec6987-7624-49ec-8e8c-1ee3c00d8e8d
+		summarizeBy: none
+		sourceColumn: Product ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: d2c3d03f-8b96-40af-aeb2-a0c294ff3ded
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategoria
+		dataType: string
+		lineageTag: c86b3e0f-8161-4675-a426-65c21d66a108
+		summarizeBy: none
+		sourceColumn: SubCategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Vendas
+		dataType: double
+		lineageTag: 1b2906bb-a139-49d0-ae85-fd709581b737
+		summarizeBy: sum
+		sourceColumn: Total_Vendas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quantidade
+		dataType: int64
+		formatString: 0
+		lineageTag: f41efa32-f76e-42b9-b2c9-8c42c3005d57
+		summarizeBy: sum
+		sourceColumn: Quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desconto
+		dataType: double
+		lineageTag: 3f379413-2763-4593-8609-56d7c10bf104
+		summarizeBy: sum
+		sourceColumn: Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lucro
+		dataType: double
+		lineageTag: 3a6c597f-aefe-4ad3-8571-0460af82578f
+		summarizeBy: sum
+		sourceColumn: Lucro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Prioridade
+		dataType: string
+		lineageTag: 1712a8fd-430d-4a02-96d0-19848eb7433c
+		summarizeBy: none
+		sourceColumn: Prioridade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dataset = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\menez\KR\Programação\00.Estudos\DataSc\DataScience\Data Analysis\Power BI\7. PBI-BI-DS-DSA\Cap02\15-dataset\dataset.csv"),[Delimiter=";", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Total_Vendas", type number}, {"Quantidade", Int64.Type}, {"Desconto", type number}, {"Lucro", type number}, {"Data_Pedido", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
