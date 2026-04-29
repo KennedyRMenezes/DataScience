@@ -1,4 +1,4 @@
-### 📈 PARTE 1 — Excel (o que você faria no trabalho)
+### 📈 PARTE 1 — Excel
 
 ❇️ Básico
 - [x] Qual o total de pedidos?
@@ -22,67 +22,29 @@ Crie uma coluna:
 - [x] dias\_entrega = data\_entrega - data\_pedido
 - [x] Qual o tempo médio de entrega por transportadora?
 
+---
 
+### 🧠 PARTE 2 — SQL
 
-### 🧠 PARTE 2 — SQL (o que vão esperar de você)
+❇️ Básico
 
-🔹 Básico
+- 1. Total de pedidos
+- 2. Total de pedidos com atraso
 
-\-- 1. Total de pedidos
+❇️ Intermediário
 
-\-- 2. Total de pedidos com atraso
+- 3. Total de pedidos por transportadora
+- 4. Média de valor por transportadora
 
-🔹 Intermediário
+❇️ Análise
 
-\-- 3. Total de pedidos por transportadora
+- 5. Taxa de atraso por transportadora
+    - dica: COUNT + CASE WHEN
+- 6. Região com mais atrasos
 
-\-- 4. Média de valor por transportadora
+❇️ Mais próximo do trabalho
 
-🔹 Análise
-
-\-- 5. Taxa de atraso por transportadora
-
-\-- dica: COUNT + CASE WHEN
-
-
-
-\-- 6. Região com mais atrasos
-
-🔹 Mais próximo do trabalho
-
-\-- 7. Tempo médio de entrega por transportadora
-
-\-- DATEDIFF ou equivalente
-
-
-
-\-- 8. Top 1 transportadora com pior desempenho
-
-🔥 DESAFIO REAL (isso aqui é o que te destaca)
-
-
-
-Responda como se estivesse no trabalho:
-
-
-
-“Identifiquei que a transportadora X tem maior taxa de atraso, principalmente na região Y. Isso impacta diretamente o cliente. Sugiro redistribuir volume ou revisar SLA.”
-
-
-
-⚡ Se quiser evoluir mais
-
-
-
-Me manda:
-
-
-
-suas respostas (Excel ou SQL)
-
-ou só o raciocínio
-
-
-
-Eu corrijo como um sênior faria — direto, sem passar pano.
+- 7. Tempo médio de entrega por transportadora
+    - DATEDIFF ou equivalente
+- 8. Top 1 transportadora com pior desempenho
 
