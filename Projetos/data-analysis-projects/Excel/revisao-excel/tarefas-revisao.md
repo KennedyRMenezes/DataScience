@@ -1,46 +1,30 @@
-📈 PARTE 1 — Excel (o que você faria no trabalho)
+### 📈 PARTE 1 — Excel (o que você faria no trabalho)
 
-🔹 Básico
+❇️ Básico
+- [x] Qual o total de pedidos?
+- [x] Qual o valor total movimentado?
+- [x] Quantos pedidos tiveram atraso?
 
-~~Qual o total de pedidos?~~
+❇️ Intermediário
+- [x] Taxa de atraso (%)
+- [x] Valor médio por pedido
+- [x] Quantidade de pedidos por transportadora
 
-Qual o valor total movimentado?
+❇️ Análise (nível trabalho)
+- [x] Qual transportadora tem maior taxa de atraso?
+    - criar coluna eh_atraso e fazer média dessa coluna na tabela dinâmica
+- [x] Qual região tem mais problemas?
+- [x] Existe relação entre valor alto e atraso?
+    - media e mediana com tabela dinâmica
 
-~~Quantos pedidos tiveram atraso?~~
-
-🔹 Intermediário
-
-~~Taxa de atraso (%)~~
-
-~~Valor médio por pedido~~
-
-~~Quantidade de pedidos por transportadora~~
-
-🔹 Análise (nível trabalho)
-
-Qual transportadora tem maior taxa de atraso?
-
-&#x09;criar coluna eh\_atraso e fazer média dessa coluna na tabela dinâmica
-
-Qual região tem mais problemas?
-
-Existe relação entre valor alto e atraso?
-
-
-
-👉 aqui você precisa interpretar, não só calcular
-
-
-
-🔹 Avançado (diferencial)
-
+❇️ Avançado (diferencial)
 Crie uma coluna:
+- [x] dias\_entrega = data\_entrega - data\_pedido
+- [x] Qual o tempo médio de entrega por transportadora?
 
-dias\_entrega = data\_entrega - data\_pedido
 
-Qual o tempo médio de entrega por transportadora?
 
-🧠 PARTE 2 — SQL (o que vão esperar de você)
+### 🧠 PARTE 2 — SQL (o que vão esperar de você)
 
 🔹 Básico
 
